@@ -2,7 +2,7 @@
  * 3/25/2019
  * HW 4 Motion Parallax
 */
-package motionparallax;
+//package motionparallax;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.Timer;
@@ -26,7 +26,7 @@ public class MotionParallax extends JFrame implements ActionListener {
     private String dragPosition = "Drag: --, --";
     private String mouseInOut = "---";
     private String mousePressed = "No";
-    
+    /*
     private Timer timeListener; //timeListener
     
     private Color skyBlue = new Color(135, 206, 250); //background color
@@ -37,7 +37,7 @@ public class MotionParallax extends JFrame implements ActionListener {
     private int treeTrunkParallax = 80;
     private int treeLeavesParallax = 80;
     private int grassParallax = 100;
-    
+    */
     public MotionParallax(){
         setTitle("Assignment 4: Motion Parallax"); //title
         getContentPane().setBackground(skyBlue); //backgroud color
@@ -47,11 +47,11 @@ public class MotionParallax extends JFrame implements ActionListener {
         //mouse listeners
         addMouseListener(new MyMouseListener());
         addMouseMotionListener(new MyMouseMotionListener());
-        
+        /*
         //timer for drawing
         timeListener = new Timer(50, this);
         timeListener.start();
-        
+        */
         //show panel
         setVisible(true);
     }
@@ -65,7 +65,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         g.drawString(mouseInOut, 70, 120);
         g.drawString(dragPosition, 70, 140);
         g.drawString(mousePressed, 70, 160);
-        
+        /*
         //new colors
         //Color name = new Color(R,G,B)
         Color skyBlue = new Color(135, 206, 250);
@@ -73,7 +73,8 @@ public class MotionParallax extends JFrame implements ActionListener {
         Color darkGreen = new Color(0, 158, 34);
         Color grass = new Color(1, 198, 28);
         Color gray = new Color(142, 142, 142);
-        
+        */
+		/*
         //polygon coordinates
         int mountainX[] = {0, 400, 200};
         int mountainY[] = {470, 470, 100};
@@ -82,10 +83,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         int triangleTreeY[] = {385, 385, 300};
         
         int points = 3; //for some reason fillPolygon needs points as a var...
-        
-        //draw singular bird
-        //g.setColor(Color.black);
-        //g.drawLine
+        */
         
                 /* References for shapes:
                 g.fillRect(x, y, Width, Height);
@@ -101,7 +99,7 @@ public class MotionParallax extends JFrame implements ActionListener {
                 g.
                 */
 
-        
+        /*
         //mountain
         for(int i=0; i<3; i++){
             mountainX[i] += (MouseX/mountainParallax);
@@ -112,7 +110,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         
         //grass
         g.setColor(grass);
-        g.fillRect(0/*+(MouseX/grassParallax)*/, 438+(MouseY/grassParallax), 500, 100);
+        g.fillRect(0/*+(MouseX/grassParallax)*//*, 438+(MouseY/grassParallax), 500, 100);
                 //the X coord is kinda pointless becuase the grass stays the same left and right...
         
         //tree (trunk and leaves)
@@ -129,7 +127,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         g.setColor(Color.yellow);
         g.fillOval(390+(MouseX/sunParallax), 80+(MouseY/sunParallax), 50, 50);
         
-        
+        */
         
         
         /*
@@ -192,6 +190,6 @@ public class MotionParallax extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new MotionParallax();
     }
-	//dsadadsadsa
+	
     
 }
