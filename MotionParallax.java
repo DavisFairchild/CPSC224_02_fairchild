@@ -26,11 +26,11 @@ public class MotionParallax extends JFrame implements ActionListener {
     private String dragPosition = "Drag: --, --";
     private String mouseInOut = "---";
     private String mousePressed = "No";
-    /*
+    
     private Timer timeListener; //timeListener
     
     private Color skyBlue = new Color(135, 206, 250); //background color
-    
+    /*
     //PARALLAX...............
     private int sunParallax = 35;
     private int mountainParallax = 125;
@@ -65,7 +65,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         g.drawString(mouseInOut, 70, 120);
         g.drawString(dragPosition, 70, 140);
         g.drawString(mousePressed, 70, 160);
-        /*
+        
         //new colors
         //Color name = new Color(R,G,B)
         Color skyBlue = new Color(135, 206, 250);
@@ -73,7 +73,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         Color darkGreen = new Color(0, 158, 34);
         Color grass = new Color(1, 198, 28);
         Color gray = new Color(142, 142, 142);
-        */
+        
 		/*
         //polygon coordinates
         int mountainX[] = {0, 400, 200};
