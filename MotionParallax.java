@@ -192,5 +192,6 @@ public class MotionParallax extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new MotionParallax();
     }
+	//dsadadsadsa
     
 }
