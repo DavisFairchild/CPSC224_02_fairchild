@@ -1,4 +1,4 @@
-/* Davis Fairchild
+/* Davis Fairchild & Omar Avellan
  * 3/25/2019
  * HW 4 Motion Parallax
 */
