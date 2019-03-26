@@ -188,5 +188,5 @@ public class MotionParallax extends JFrame implements ActionListener {
         new MotionParallax();
     }
 	
-    //fin
+    //finished
 }
