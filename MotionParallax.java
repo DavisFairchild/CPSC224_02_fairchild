@@ -1,8 +1,8 @@
-/* Davis Fairchild & Omar Avellan
+/* Davis Fairchild
  * 3/25/2019
  * HW 4 Motion Parallax
 */
-//package motionparallax;
+package motionparallax;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.Timer;
@@ -25,19 +25,19 @@ public class MotionParallax extends JFrame implements ActionListener {
     private boolean drag = false;
     private String dragPosition = "Drag: --, --";
     private String mouseInOut = "---";
-    private String mousePressed = "No";
+    private String mousePressed = "Mouse press: No";
     
     private Timer timeListener; //timeListener
     
     private Color skyBlue = new Color(135, 206, 250); //background color
-    /*
+    
     //PARALLAX...............
     private int sunParallax = 35;
     private int mountainParallax = 125;
     private int treeTrunkParallax = 80;
     private int treeLeavesParallax = 80;
     private int grassParallax = 100;
-    */
+    
     public MotionParallax(){
         setTitle("Assignment 4: Motion Parallax"); //title
         getContentPane().setBackground(skyBlue); //backgroud color
@@ -47,11 +47,11 @@ public class MotionParallax extends JFrame implements ActionListener {
         //mouse listeners
         addMouseListener(new MyMouseListener());
         addMouseMotionListener(new MyMouseMotionListener());
-        /*
+        
         //timer for drawing
-        timeListener = new Timer(50, this);
+        timeListener = new Timer(100, this);
         timeListener.start();
-        */
+        
         //show panel
         setVisible(true);
     }
@@ -74,7 +74,6 @@ public class MotionParallax extends JFrame implements ActionListener {
         Color grass = new Color(1, 198, 28);
         Color gray = new Color(142, 142, 142);
         
-		
         //polygon coordinates
         int mountainX[] = {0, 400, 200};
         int mountainY[] = {470, 470, 100};
@@ -84,6 +83,9 @@ public class MotionParallax extends JFrame implements ActionListener {
         
         int points = 3; //for some reason fillPolygon needs points as a var...
         
+        //draw singular bird
+        //g.setColor(Color.black);
+        //g.drawLine
         
                 /* References for shapes:
                 g.fillRect(x, y, Width, Height);
@@ -126,8 +128,11 @@ public class MotionParallax extends JFrame implements ActionListener {
         //sun
         g.setColor(Color.yellow);
         g.fillOval(390+(MouseX/sunParallax), 80+(MouseY/sunParallax), 50, 50);
-
-		/*
+        
+        
+        
+        
+        /*
         //red reference bars - only used for testing and getting oriented
         g.setColor(Color.red);
         //x
@@ -142,7 +147,7 @@ public class MotionParallax extends JFrame implements ActionListener {
         g.drawLine(300, 0, 300, 538);
         g.drawLine(400, 0, 400, 538);
         g.drawLine(500, 0, 500, 538);
-		*/
+        */
     }
     
     //when the timeListener activates the panel will repaint
@@ -171,10 +176,10 @@ public class MotionParallax extends JFrame implements ActionListener {
             clicks = "Clicks: " + click;
         }
         public void mousePressed(MouseEvent e) {
-            mousePressed = "Yes";
+            mousePressed = "Mouse press: Yes";
         }
         public void mouseReleased(MouseEvent e) {
-            mousePressed = "No";
+            mousePressed = "Mouse press: No";
         }
         public void mouseEntered(MouseEvent e) {
             mouseInOut = "Entered";
@@ -187,6 +192,5 @@ public class MotionParallax extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new MotionParallax();
     }
-	
-    //finished
+    
 }
